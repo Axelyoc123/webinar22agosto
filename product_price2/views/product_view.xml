@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Inherit form view to modify it-->
+        <record id="product_template_form_view_price2" model="ir.ui.view">
+            <field name="name">product.template.common.form.price2</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <!-- <field name="list_price" position="before">
+                    <field name="price_2"></field>la etiqueta field sirve para llamar a los campos del modelo 
+                </field> 
+                 -->
+                 <group name="group_standard_price" position="inside">
+                    <label for="price_2"/>
+                    <div name="pricing_2">
+                        <field name="price_2" class="oe_inline" widget='monetary'
+                                options="{'currency_field': 'currency_id', 'field_digits': True"></field>
+                    </div>
+                        <!-- xpath es un tipo de lenguaje de programacion para xml-->
+                    
+                 </group>
+            </field>
+        </record>
+        
+    
+    </data>
+    
+    
+
+</odoo>
